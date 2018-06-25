@@ -32,9 +32,9 @@
 			<p class="form_title">Register</p>
 				<form class="registration">
 					<div class="register_container">
-						<label for="email">Email</label><input type="text" id="email"><br/>
-						<label for="pass">Password</label><input type="password" id="pass"><br/>
-						<label for="cpass">Confirm Password</label><input type="password" id="cpass"><br/>
+						<label for="email">Email</label><input type="email" id="email_reg"><br/>
+						<label for="pass">Password</label><input type="password" id="pass_reg"><br/>
+						<label for="cpass">Confirm Password</label><input type="password" id="cpass_reg"><br/>
 						<input type="checkbox" value="remember_me"><span>Remember me</span>
 						<div class="register_submit">
 							<input type="button" value="Register" onclick="register_check();">
