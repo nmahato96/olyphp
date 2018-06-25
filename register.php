@@ -30,23 +30,24 @@
 			<?php include 'header.php'; ?>
 			<section>
 			<p class="form_title">Register</p>
-				<div class="registration">
+				<form class="registration">
 					<div class="register_container">
 						<label for="email">Email</label><input type="text" id="email"><br/>
 						<label for="pass">Password</label><input type="password" id="pass"><br/>
 						<label for="cpass">Confirm Password</label><input type="password" id="cpass"><br/>
 						<input type="checkbox" value="remember_me"><span>Remember me</span>
 						<div class="register_submit">
-							<input type="submit" value="Register">
+							<input type="button" value="Register" onclick="register_check();">
 						</div>
 						
 					</div>
 					<div class="register_info">
 						
 					</div>
-				</div>
+				</form>
 			</section>
 		</div>
 		<?php include 'footer.php';?>
 	</body>
+	<script src="custom.js"></script>
 </html>
