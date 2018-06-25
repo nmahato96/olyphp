@@ -49,5 +49,5 @@
 		</div>
 		<?php include 'footer.php';?>
 	</body>
-	<script src="custom.js"></script>
+	<script src="js/custom.js"></script>
 </html>
