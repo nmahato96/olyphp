@@ -1,6 +1,6 @@
 			<header>
 				<div class="logo col-md-1">
-					<img src="img/logo.png">
+					<a href="index.php"><img src="img/logo.png"></a>
 				</div>
 				<div class="logo_text col-md-7">
 					<p>India Largest Marketplace</p>

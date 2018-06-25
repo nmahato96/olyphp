@@ -29,20 +29,21 @@
 		<div class="container">
 			<?php include 'header.php'; ?>
 			<section>
-				<form>
+				<form id="login_page_form">
 					<p class="form_title">Login</p>
-					<div class="login_container">
-						<label for="email">Email</label><input type="text" id="email"><br/>
-						<label for="pass">Password</label><input type="password" id="pass"><br/>
-						<input type="checkbox" value="remember_me"><span>Remember me</span>
-						<div class="login_submit">
-							<input type="submit" value="Log in">
+					<div class="login_main_container">
+						<div class="login_container">
+							<label for="email">Email</label><input type="text" id="email"><br/>
+							<label for="pass">Password</label><input type="password" id="pass"><br/>
+							<input type="checkbox" value="remember_me"><span>Remember me</span>
+							<div class="login_submit">
+								<input type="submit" value="Log in">
+							</div>
 						</div>
-						
-					</div>
-					<div class="register">
-						<a href="#">Unable to Login</a>
-						<a href="register.php">Register</a>
+						<div class="register">
+							<a href="#">Unable to Login</a>
+							<a href="register.php">Register</a>
+						</div>
 					</div>
 				</form>
 				<div class="login_social">
