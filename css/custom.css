@@ -1,0 +1,150 @@
+*{
+	margin:0;
+	padding:0;
+}
+header {
+    display: flex;
+}
+.logo_text p {
+    padding-top: 7%;
+    font-size: 122%;
+    color: #3b3a3a;
+    padding-left: 1%;
+}
+.logo img {
+    padding-top: 1%;
+}
+.my_account_btn {
+	padding-left: 4%;
+    padding-top: 5%;
+    padding-right: 0px;
+
+}
+a:not([href]):not([tabindex]) {
+
+    color: black;
+    text-decoration: none;
+
+}
+.my_account_btn.col-md-2 a {
+
+    color: #3c74d5;
+    font-weight: 700;
+
+}
+
+.submit_free_add_btn.col-md-2 {
+
+    padding-left: 0px;
+    padding-top: 4.5%;
+    padding-right: 0px;
+
+}
+.submit_free_add_btn.col-md-2 a {
+
+    background: #f88300;
+    color: white;
+    font-weight: 700;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+
+}
+.select_ln {
+
+    position: absolute;
+    right: 12%;
+    background: #f3f3f3;
+    padding: 6px 10px 6px 10px;
+
+}
+.select_ln p {
+
+    font-size: 80%;
+    color: #6b6b6b;
+    padding: 0;
+    margin: 0;
+
+}
+section{
+	height:300px;
+}
+footer{
+	background: url("../img/footer2.png") no-repeat 50% 30px;
+	height:206px;
+}
+footer img {
+    bottom: 0px;
+    margin-left: 18%;
+    margin-top: 2.4%;
+}
+.footer2 {
+
+    margin-top: 3%;
+    display: flex;
+
+}
+.footer_links {
+
+    display: flex;
+    padding-left: 6%;
+
+}
+.footer_links ul {
+
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 86%;
+    margin-right: 9%;
+
+}
+.footer_social.col-md-4 ul li {
+
+    flex-basis: 47px;
+    border: 1px solid;
+    text-align: center;
+    height: 47px;
+    margin-right: 5%;
+    border-radius: 50%;
+    line-height: 41px;
+    font-size: 118%;
+    color: white;
+
+}
+.footer_social.col-md-4 ul {
+
+    display: flex;
+    list-style-type: none;
+
+}
+.f_fb {
+
+    background: #445090;
+
+}
+.f_gp {
+
+    background: #ec5454;
+
+}
+.f_t {
+
+    background: #63b8cb;
+
+}
+.f_i {
+
+    background: #ff869b;
+
+}
+.footer_social.col-md-4 p {
+
+    font-size: 83%;
+    margin-left: 18%;
+
+}
+.footer_about.col-md-12 p {
+
+    font-size: 75%;
+    padding: 0% 13%;
+
+}
