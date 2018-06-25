@@ -6,7 +6,7 @@
 					<p>India Largest Marketplace</p>
 				</div>
 				<div class="my_account_btn col-md-2">
-					<a><i class="fas fa-user"></i> My Account</a>
+					<a href="login.php"><i class="fas fa-user"></i> My Account</a>
 				</div>
 				<div class="submit_free_add_btn col-md-2">
 					<a>Submit a Free Ad</a>
