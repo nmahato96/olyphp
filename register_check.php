@@ -2,7 +2,7 @@
 	$servername="localhost";
 	$username="root";
 	$password="aapna@123";
-	$dbname="oly";
+	$dbname="olyphp";
 	
 	// Create connection
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -22,7 +22,7 @@
 		}else{
 			if( $upass == $cpass){
 				$conv_pass = md5($upass);
-				$sql = "INSERT INTO user (name, email, password, status)
+				$sql = "INSERT INTO user (name, email, pass, status)
 				VALUES ('".$uname."', '".$uemail."', '".$conv_pass."', 'false')";
 
 				if (mysqli_query($conn, $sql)) {
