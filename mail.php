@@ -1,11 +1,9 @@
-
 <?php
-$to      = 'niladrimahato96@gmail.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: nmahato@aapnainfotech.in' . "\r\n" .
-    'Reply-To: nmahato@aapnainfotech.in' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+$to = "niladrimahato96@gmail.com";
+$subject = "mail function";
+$txt = "testing mail function in server";
+$headers = "From: nmahato@aapnainfotech.in" . "\r\n" .
+"CC: akashkgp96@gmail.com";
 
-mail($to, $subject, $message, $headers);
+mail($to,$subject,$txt,$headers);
 ?>
