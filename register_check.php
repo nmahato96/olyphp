@@ -1,7 +1,7 @@
 <?php 
 	$servername="localhost";
 	$username="root";
-	$password="";
+	$password="aapna@123";
 	$dbname="oly";
 	
 	// Create connection
