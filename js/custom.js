@@ -16,6 +16,7 @@ function register_check(){
 							//var obj=JSON.parse(response);
 							if( response == "true" ){
 								$(".registration").remove();
+								$(".form_title").remove();
 								$(".reg_mail_ver_panel").removeClass("no_display");
 							}else{
 								alert(response);
