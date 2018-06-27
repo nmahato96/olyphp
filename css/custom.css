@@ -227,3 +227,10 @@ footer img {
     margin-top: 3%;
 
 }
+.submit_free_add_btn.col-md-2 a:hover {
+
+    background: #e07e11;
+    cursor: pointer;
+    color: white;
+
+}
