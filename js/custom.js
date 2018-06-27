@@ -1,4 +1,5 @@
 function register_check(){
+	$(".spinner").fadeIn();
 	var name = $("#name_reg").val();
 	var email = $("#email_reg").val();
 	var pass = $("#pass_reg").val();
@@ -18,6 +19,7 @@ function register_check(){
 								$(".registration").remove();
 								$(".form_title").remove();
 								$(".reg_mail_ver_panel").removeClass("no_display");
+								$(".spinner").fadeOut();
 							}else{
 								alert(response);
 							}

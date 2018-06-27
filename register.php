@@ -26,6 +26,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
+		<div class="spinner"></div>
 		<div class="container">
 			<?php include 'header.php'; ?>
 			<section>
