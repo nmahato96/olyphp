@@ -1,4 +1,6 @@
 <?php
-	define('EMAIL','phpmailer96@gmail.com');
-	define('PASS','root@1234');
+// ALTER TABLE product
+// ADD COLUMN price VARCHAR(250) AFTER description;
+define('EMAIL','niltest96@gmail.com');
+define('PASS','root@1234');
 ?>

@@ -59,7 +59,7 @@
 						<i class="fas fa-check"></i>
 					</div>
 					<div class="mail_ver_info">
-						<p>A link is sent to your mail. Click on the link to activate your accout.</p>
+						<p>A link is sent to your mail. Click on the link to activate your account.</p>
 					</div>
 				</div>
 			</section>

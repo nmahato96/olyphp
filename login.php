@@ -1,5 +1,11 @@
 <?php
-
+session_start();
+if(isset($_REQUEST["id"])){
+	$_SESSION["id"]=$_REQUEST["id"];
+}
+if(isset($_REQUEST["name"])){
+	$_SESSION["name"]=$_REQUEST["name"];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,15 +35,15 @@
 		<div class="container">
 			<?php include 'header.php'; ?>
 			<section>
-				<form id="login_page_form">
+				<form id="login_page_form" action="login_verify.php" method="post">
 					<p class="form_title">Login</p>
 					<div class="login_main_container">
 						<div class="login_container">
-							<label for="email">Email</label><input type="text" id="email"><br/>
-							<label for="pass">Password</label><input type="password" id="pass"><br/>
+							<label for="email">Email</label><input type="email" id="l_email" name="email"><br/>
+							<label for="pass">Password</label><input type="password" id="l_pass" name="pass"><br/>
 							<input type="checkbox" value="remember_me"><span>Remember me</span>
 							<div class="login_submit">
-								<input type="submit" value="Log in">
+								<input type="button" onclick="login_check();" value="Log in">
 							</div>
 						</div>
 						<div class="register">
@@ -53,4 +59,5 @@
 		</div>
 		<?php include 'footer.php';?>
 	</body>
+	<script src="js/custom.js"></script>
 </html>

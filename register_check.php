@@ -1,21 +1,5 @@
 <?php 
-	$servername="localhost";
-	$username="root";
-	$password="aapna@123";
-	$dbname="olyphp";
-	
-	// $servername="localhost";
-	// $username="root";
-	// $password="";
-	// $dbname="oly";
-	
-	// Create connection
-		$conn = mysqli_connect($servername, $username, $password, $dbname);
-	
-	// Check connection
-		if (!$conn) {
-			die("Connection failed: " . mysqli_connect_error());
-		}
+require('db_details.php');
 		
 		$uname = trim($_REQUEST["name"]);
 		$uemail = trim($_REQUEST["email"]);
@@ -33,27 +17,29 @@
 					if( preg_match($pattern,$uemail)){
 						$conv_pass = md5($upass);
 						
-						
-						
 						$sql = "SELECT * FROM user WHERE email='".$uemail."'";
 						$result = mysqli_query($conn, $sql);
 
 						if (mysqli_num_rows($result) > 0) {
 							// output data of each row
 							while($row = mysqli_fetch_assoc($result)) {
-								if($row["status"]=="false"){
+								if(isset($row["token"])){
 									echo "registration incomplete. Please check mail.";
 								}else{
-									echo "Already Registered!";
+									echo "Email Already Registered!";
 								}
 							}
 						} else {
-								$sql = "INSERT INTO user (name, email, pass, status)
-								VALUES ('".$uname."', '".$uemail."', '".$conv_pass."', 'false')";
-
+							$token=mt_rand();
+							## For server password variable is pass && for localhost password variable is password
+								$sql = "INSERT INTO user (name, email, password, status,token)
+								VALUES ('".$uname."', '".$uemail."', '".$conv_pass."', 'false','".$token."')";
+								
+							
 								if (mysqli_query($conn, $sql)) {
+									$last_id = mysqli_insert_id($conn);
 									
-									
+									$urlsend="http://localhost/oly/olyphp/index.php?t=".$token;
 									/****** php mailer start ****/	
 									require 'PHPMailerAutoload.php';
 									require 'credentials.php';
@@ -75,15 +61,15 @@
 									$mail->addReplyTo(EMAIL);
 
 										   // Add attachments
-									//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+									$mail->addAttachment('uploads/asus.jpg', 'new.jpg');    // Optional name
 									$mail->isHTML(true);                                  // Set email format to HTML
 
 									$mail->Subject = 'Account Verification';
-									$mail->Body    = 'Click on the link to verify your account.<br><a>https://www.google.com</a>';
+									$mail->Body    = 'Click on the link to verify your account.<br><a href="'.$urlsend.'"><u>Click here</u></a>';
 									$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 									if(!$mail->send()) {
-										// echo 'Message could not be sent.';
+										 echo 'Message could not be sent.';
 										// echo 'Mailer Error: ' . $mail->ErrorInfo;
 										
 									} else {
@@ -91,10 +77,14 @@
 										echo "true";
 									}
 									
-									/****** php mailer end ****/	
+									/****** php mailer end ****/
+									
+									
 								} else {
 									echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 								}
+								
+								
 							}	
 					}else{
 						echo "invalid email";
